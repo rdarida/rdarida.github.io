@@ -1,0 +1,24 @@
+{
+  "name": "rdarida.github.io",
+  "version": "0.0.0",
+  "description": "My GitHub Page",
+  "scripts": {
+    "prebuild": "rimraf public",
+    "build": "mkdir public && copyfiles index.md public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdarida/rdarida.github.io.git"
+  },
+  "author": "Róbert Darida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rdarida/rdarida.github.io/issues"
+  },
+  "homepage": "https://github.com/rdarida/rdarida.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2"
+  }
+}
