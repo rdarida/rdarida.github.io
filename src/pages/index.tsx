@@ -1,12 +1,10 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Badge from "../components/badge"
+import { Layout, Seo, Badge } from "../components"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <Seo title="Home" />
     <h1>Róbert Darida</h1>
     <hr />
     <h2>Hi there 👋</h2>

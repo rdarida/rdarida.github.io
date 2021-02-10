@@ -1,6 +1,13 @@
 import React from "react"
 
-const Badge = ({ text, color, logo, logoColor }) => {
+type BadgeProps = {
+  text?: string
+  color?: string
+  logo: string
+  logoColor?: string
+}
+
+export const Badge = ({ text, color, logo, logoColor }: BadgeProps): JSX.Element => {
   if (!text) text = logo
 
   if (!color) color = "05122A"
@@ -23,5 +30,3 @@ const Badge = ({ text, color, logo, logoColor }) => {
     />
   )
 }
-
-export default Badge
