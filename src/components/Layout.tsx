@@ -8,12 +8,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./HHeader"
-import "./LLayout.css"
+import { Header } from "./Header"
+import "./Layout.css"
 
 type LayoutProps = {
   children: any | Array<any>
-};
+}
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
   const data = useStaticQuery(graphql`

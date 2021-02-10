@@ -1,3 +1,3 @@
-export * from "./BBadge";
-export * from "./LLayout";
-export * from "./SSeo";
+export * from "./Badge"
+export * from "./Layout"
+export * from "./Seo"

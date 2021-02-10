@@ -7,7 +7,12 @@ type BadgeProps = {
   logoColor?: string
 }
 
-export const Badge = ({ text, color, logo, logoColor }: BadgeProps): JSX.Element => {
+export const Badge = ({
+  text,
+  color,
+  logo,
+  logoColor,
+}: BadgeProps): JSX.Element => {
   if (!text) text = logo
 
   if (!color) color = "05122A"
