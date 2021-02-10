@@ -2,7 +2,7 @@
 
 ## Hi there 👋
 
-### 👨🏻‍💻 &nbsp;About Me  
+### 👨🏻‍💻 &nbsp;About Me
 
 💡 &nbsp;I'm a Software Engineer based in Budapest, Hungary.\
 🏢 &nbsp;I'm currently working at Play'n GO.\
@@ -23,6 +23,7 @@
 [![Medium](https://img.shields.io/badge/-Medium-05122A?style=for-the-badge&logo=medium)](https://rdarida.medium.com/)
 
 ### 🛠 &nbsp;Tech Stack
+
 ![HTML](https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5)&nbsp;
 ![CSS](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6)&nbsp;
 ![Node.js](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)&nbsp;
