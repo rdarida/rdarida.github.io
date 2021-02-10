@@ -19,7 +19,13 @@ const IndexPage = () => (
       <br />
       🎓 I graduated with BSc in Computer Science from University of Szeged.
       <br />
-      📫 How to reach me: TBD
+      📫 How to reach me:
+      <a href="https://www.linkedin.com/in/rdarida">
+        <Badge logo="LinkedIn" color="blue" />
+      </a>
+      <a href="https://github.com/rdarida">
+        <Badge text="My GitHub Profile" logo="github" />
+      </a>
     </p>
 
     <h3>✍🏻 My Articles</h3>

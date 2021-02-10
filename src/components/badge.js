@@ -1,7 +1,9 @@
 import React from "react"
 
-const Badge = ({ text, logo, logoColor }) => {
+const Badge = ({ text, color, logo, logoColor }) => {
   if (!text) text = logo
+
+  if (!color) color = "05122A"
 
   text = text.replace(new RegExp("-", "g"), "_")
 
@@ -9,7 +11,7 @@ const Badge = ({ text, logo, logoColor }) => {
     return (
       <img
         style={{ margin: "0 0.125em" }}
-        src={`https://img.shields.io/badge/-${text}-05122A?style=flat&logo=${logo}&logoColor=${logoColor}`}
+        src={`https://img.shields.io/badge/-${text}-${color}?style=flat&logo=${logo}&logoColor=${logoColor}`}
       />
     )
   }
@@ -17,7 +19,7 @@ const Badge = ({ text, logo, logoColor }) => {
   return (
     <img
       style={{ margin: "0 0.125em" }}
-      src={`https://img.shields.io/badge/-${text}-05122A?style=flat&logo=${logo}`}
+      src={`https://img.shields.io/badge/-${text}-${color}?style=flat&logo=${logo}`}
     />
   )
 }
