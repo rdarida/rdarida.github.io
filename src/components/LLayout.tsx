@@ -8,8 +8,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./Header"
-import "./layout.css"
+import Header from "./HHeader"
+import "./LLayout.css"
 
 type LayoutProps = {
   children: any | Array<any>
