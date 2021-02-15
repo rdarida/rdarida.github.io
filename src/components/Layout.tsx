@@ -5,15 +5,15 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import { Header } from "./Header"
-import "./Layout.css"
+import { Header } from './Header';
+import './Layout.css';
 
 type LayoutProps = {
-  children: any | Array<any>
-}
+  children: any | Array<any>;
+};
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -24,7 +24,7 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -33,16 +33,16 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          padding: `0 1.0875rem 1.45rem`
         }}
       >
         <main>{children}</main>
         <footer
           style={{
             marginTop: `2rem`,
-            paddingTop: "0.5rem",
-            borderTop: "1px solid lightgrey",
-            textAlign: "right",
+            paddingTop: '0.5rem',
+            borderTop: '1px solid lightgrey',
+            textAlign: 'right'
           }}
         >
           © {new Date().getFullYear()}, Built with
@@ -51,5 +51,5 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
         </footer>
       </div>
     </>
-  )
-}
+  );
+};

@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import { Layout, Seo, Badge } from "../components"
+import { Layout, Seo, Badge } from '../components';
 
 const IndexPage = () => (
   <Layout>
@@ -93,6 +93,6 @@ const IndexPage = () => (
       />
     </p>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

@@ -1,37 +1,37 @@
-import React from "react"
+import React from 'react';
 
 type BadgeProps = {
-  text?: string
-  color?: string
-  logo: string
-  logoColor?: string
-}
+  text?: string;
+  color?: string;
+  logo: string;
+  logoColor?: string;
+};
 
 export const Badge = ({
   text,
   color,
   logo,
-  logoColor,
+  logoColor
 }: BadgeProps): JSX.Element => {
-  if (!text) text = logo
+  if (!text) text = logo;
 
-  if (!color) color = "05122A"
+  if (!color) color = '05122A';
 
-  text = text.replace(new RegExp("-", "g"), "_")
+  text = text.replace(new RegExp('-', 'g'), '_');
 
   if (logoColor) {
     return (
       <img
-        style={{ margin: "0 0.125em" }}
+        style={{ margin: '0 0.125em' }}
         src={`https://img.shields.io/badge/-${text}-${color}?style=flat&logo=${logo}&logoColor=${logoColor}`}
       />
-    )
+    );
   }
 
   return (
     <img
-      style={{ margin: "0 0.125em" }}
+      style={{ margin: '0 0.125em' }}
       src={`https://img.shields.io/badge/-${text}-${color}?style=flat&logo=${logo}`}
     />
-  )
-}
+  );
+};
