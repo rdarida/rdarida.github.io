@@ -4,4 +4,8 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-// You can delete this file if you're not using it
+import './src/style.css';
+
+import 'jquery';
+import 'popper.js'
+import 'bootstrap';
