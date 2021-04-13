@@ -1,4 +1,10 @@
-# My GitHub Page
+<h1 align="center">rdarida.github.io</h1>
+<p align="center">My GitHub Page</p>
+<p align="center">  
+  <img alt="dependencies" src="https://david-dm.org/rdarida/rdarida.github.io/status.svg" />
+  <img alt="devDependenceis" src="https://david-dm.org/rdarida/rdarida.github.io/dev-status.svg" />
+</p>
+<hr>
 
 ## 🚀 Quick start
 
@@ -85,3 +91,6 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## Resources
+
