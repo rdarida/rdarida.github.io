@@ -96,3 +96,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - [How Web Developers Can Build an Effective Portfolio](https://javascript.plainenglish.io/how-web-developers-can-build-an-effective-portfolio-aed719927589)
 - [Jacek Jeznach](https://jacekjeznach.com/)
 - [Developerfolio](https://developerfolio.js.org/)
+- [How to Render Medium Blog Posts on Your Website](https://medium.com/swlh/how-to-render-medium-blog-posts-on-your-website-f14ef11dd20)
