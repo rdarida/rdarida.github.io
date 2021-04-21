@@ -97,3 +97,6 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - [Jacek Jeznach](https://jacekjeznach.com/)
 - [Developerfolio](https://developerfolio.js.org/)
 - [How to Render Medium Blog Posts on Your Website](https://medium.com/swlh/how-to-render-medium-blog-posts-on-your-website-f14ef11dd20)
+- [Josh Comeau](https://www.joshwcomeau.com/)
+- [Why My Blog is Closed-Source](https://www.joshwcomeau.com/blog/why-my-blog-is-closed-source/)
+- [How I Built My Blog](https://www.joshwcomeau.com/blog/how-i-built-my-blog/)
