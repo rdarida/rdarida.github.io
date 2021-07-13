@@ -13,7 +13,7 @@ const IndexPage = () => (
     <p>
       💡 I'm a Software Engineer based in Budapest, Hungary.
       <br />
-      🏢 I'm currently working at Play'n GO.
+      🏢 I'm currently working at Cursor Insight.
       <br />
       🎓 I graduated with BSc in Computer Science from University of Szeged.
       <br />
