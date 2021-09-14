@@ -101,3 +101,4 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - [Why My Blog is Closed-Source](https://www.joshwcomeau.com/blog/why-my-blog-is-closed-source/)
 - [How I Built My Blog](https://www.joshwcomeau.com/blog/how-i-built-my-blog/)
 - [ironsoul portfolio site](https://ironsoul.ninja/)
+- [Leeneon portfolio template](https://github.com/Manussakis/leeneon)
