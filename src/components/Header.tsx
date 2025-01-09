@@ -1,5 +1,5 @@
+import Link from 'next/link';
 import React from 'react';
-import { Link } from 'gatsby';
 
 type HeaderProps = {
   siteTitle?: string;
@@ -21,7 +21,7 @@ export const Header = ({ siteTitle = '' }: HeaderProps) => (
     >
       <h1 style={{ margin: 0 }}>
         <Link
-          to="/"
+          href="/"
           style={{
             color: `white`,
             textDecoration: `none`

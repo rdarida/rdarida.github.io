@@ -1,11 +1,6 @@
-.cache
-.vscode
-public
-gatsby-browser.js
-gatsby-config.js
-gatsby-node.js
-gatsby-ssr.js
-LICENSE
-package.json
+.next
+out
+
 package-lock.json
-README.md
+
+*.md

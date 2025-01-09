@@ -1,8 +1,9 @@
 import React from 'react';
+import { NextPage } from 'next';
 
-import { Layout, Seo, Badge } from '../components';
+import { Layout, Seo, Badge } from '@/components';
 
-const IndexPage = () => (
+const Home: NextPage = (): JSX.Element => (
   <Layout>
     <Seo title="Home" />
     <h1>Róbert Darida</h1>
@@ -13,7 +14,7 @@ const IndexPage = () => (
     <p>
       💡 I'm a Software Engineer based in Budapest, Hungary.
       <br />
-      🏢 I'm currently working at Cursor Insight.
+      🏢 I'm currently working at Play'n GO.
       <br />
       🎓 I graduated with BSc in Computer Science from University of Szeged.
       <br />
@@ -26,30 +27,32 @@ const IndexPage = () => (
       </a>
     </p>
 
-    <h3>✍🏻 My Articles</h3>
-    <p>
-      <a
-        href="https://rdarida.medium.com/electron-angular-live-reload-13ebc9808bb5"
-        target="_blank"
-      >
-        Electron & Angular: Live Reload
-      </a>
-      <br />
-      <a
-        href="https://rdarida.medium.com/electron-angular-the-boilerplate-a8db7f411416"
-        target="_blank"
-      >
-        Electron & Angular: The Boilerplate
-      </a>
-      <br />
-      <a
-        href="https://rdarida.medium.com/building-a-nodejs-project-and-deploying-it-into-a-digitalocean-droplet-with-jenkins-6b46fa3054ef"
-        target="_blank"
-      >
-        Building a NodeJS project and deploying it into a DigitalOcean Droplet
-        with Jenkins
-      </a>
-    </p>
+    <div hidden>
+      <h3>✍🏻 My Articles</h3>
+      <p>
+        <a
+          href="https://rdarida.medium.com/electron-angular-live-reload-13ebc9808bb5"
+          target="_blank"
+        >
+          Electron & Angular: Live Reload
+        </a>
+        <br />
+        <a
+          href="https://rdarida.medium.com/electron-angular-the-boilerplate-a8db7f411416"
+          target="_blank"
+        >
+          Electron & Angular: The Boilerplate
+        </a>
+        <br />
+        <a
+          href="https://rdarida.medium.com/building-a-nodejs-project-and-deploying-it-into-a-digitalocean-droplet-with-jenkins-6b46fa3054ef"
+          target="_blank"
+        >
+          Building a NodeJS project and deploying it into a DigitalOcean Droplet
+          with Jenkins
+        </a>
+      </p>
+    </div>
 
     <h3>🛠 Tech Stack</h3>
     <p>
@@ -95,4 +98,4 @@ const IndexPage = () => (
   </Layout>
 );
 
-export default IndexPage;
+export default Home;

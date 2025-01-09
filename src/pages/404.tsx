@@ -1,8 +1,9 @@
 import React from 'react';
+import { NextPage } from 'next';
 
-import { Layout, Seo } from '../components';
+import { Layout, Seo } from '@/components';
 
-const NotFoundPage = () => (
+const NotFoundPage: NextPage = (): JSX.Element => (
   <Layout>
     <Seo title="404: Not found" />
     <h1>404: Not Found</h1>

@@ -1,87 +1,60 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import React from 'react';
-import PropTypes from 'prop-types';
+import { FC } from 'react';
 import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
-export function Seo({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  );
+type SeoProps = {
+  title: string;
+  description?: string;
+  lang?: string;
+  meta?: any[];
+};
 
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+export const Seo: FC<SeoProps> = ({
+  description = '',
+  lang = 'en',
+  meta = [],
+  title
+}) => {
+  const defaultTitle = 'rdarida.github.io';
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang
-      }}
+      htmlAttributes={{ lang }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
       meta={[
         {
-          name: `description`,
-          content: metaDescription
+          name: 'description',
+          content: description
         },
         {
-          property: `og:title`,
+          property: 'og:title',
           content: title
         },
         {
-          property: `og:description`,
-          content: metaDescription
+          property: 'og:description',
+          content: description
         },
         {
-          property: `og:type`,
-          content: `website`
+          property: 'og:type',
+          content: 'website'
         },
         {
-          name: `twitter:card`,
-          content: `summary`
+          name: 'twitter:card',
+          content: 'summary'
         },
         {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``
+          name: 'twitter:creator',
+          content: 'Róbert Darida'
         },
         {
-          name: `twitter:title`,
+          name: 'twitter:title',
           content: title
         },
         {
-          name: `twitter:description`,
-          content: metaDescription
+          name: 'twitter:description',
+          content: description
         }
       ].concat(meta)}
     />
   );
-}
-
-Seo.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``
-};
-
-Seo.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired
 };
