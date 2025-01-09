@@ -2,7 +2,8 @@ name: GitHub Pages Deploy
 
 on:
   push:
-    branches: [ develop ]
+    branches:
+      - Xdevelop
 
 jobs:
   github-pages-deploy:
