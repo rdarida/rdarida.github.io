@@ -3,7 +3,7 @@ name: GitHub Pages Deploy
 on:
   push:
     branches:
-      - Xdevelop
+      - main
 
 jobs:
   github-pages-deploy:
@@ -11,7 +11,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+
+      - name: Set up NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
       - name: Install and build
         run: |
@@ -21,6 +26,7 @@ jobs:
       - name: Deploy
         uses: rdarida/simple-github-pages-deploy-action@v1
         with:
-          git-base-folder: 'public'
+          git-user: 'github-actions[bot]'
+          git-email: 'github-actions[bot]@users.noreply.github.com'
+          git-base-folder: 'out'
           commit-message: 'Automatic deploy'
-          branch: 'main'
