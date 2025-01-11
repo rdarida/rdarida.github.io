@@ -55,13 +55,16 @@ const Home: NextPage = (): JSX.Element => (
     </div>
 
     <h3>🔨 Projects</h3>
-    <p>
-      <a href="https://github.com/rdarida/lerna-templater/" target="_blank">
-        <b>lerna-templater</b>
-      </a>
-      {' - '}
-      Generates package from template for a Lerna Monorepo Project
-    </p>
+    <p>These are the projects I work on in my free time:</p>
+    <ul>
+      <li>
+        <a href="https://github.com/rdarida/lerna-templater/" target="_blank">
+          <b>lerna-templater</b>
+        </a>
+        {' - '}
+        Generates package from template for a Lerna Monorepo Project
+      </li>
+    </ul>
 
     <h3>🛠 Tech Stack</h3>
     <p>
@@ -73,25 +76,25 @@ const Home: NextPage = (): JSX.Element => (
       <Badge logo="WebGL" logoColor="990000" />
       <br />
 
-      <Badge logo="Bootstrap" logoColor="563D7C" />
-      <Badge logo="Material-UI" logoColor="0081CB" />
-      <Badge logo="Redux" logoColor="764ABC" />
-      <Badge logo="React" />
-      <Badge logo="Electron" logoColor="61DAFB" />
-      <Badge logo="Firebase" />
-      <Badge logo="Storybook" />
       <Badge
         text="Pixi.js"
         logo="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDA1IDc5LjE2NDU5MCwgMjAyMC8xMi8wOS0xMTo1Nzo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIyLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkI2QkIyNDMzNjYwMjExRUJBQkJDOENDMTQyMkQ4NzJFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkI2QkIyNDM0NjYwMjExRUJBQkJDOENDMTQyMkQ4NzJFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QjZCQjI0MzE2NjAyMTFFQkFCQkM4Q0MxNDIyRDg3MkUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QjZCQjI0MzI2NjAyMTFFQkFCQkM4Q0MxNDIyRDg3MkUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5WNtgSAAADEklEQVR42sSXW2yMQRTH7ba07rFSlYZ2tdqupBoSEnELcU0kIvHgTSUNER6ouDwgCPEgrg+CiAcJ3kiExCUSpFaoiqSiVEhpPVANSqXrstbvyNlkbXa+nW+/bTrJf898O985858zZ86czxeLxfr1ZfP1htEPxbXjEAVgMJAVdoPOwrYzb1wRwJCM7wVjQY/+3R/8BDsx2JnwbiFiBVgAQkCeBymB76ADvAYPwXXwGP1fuRYL2qqTJrdjsiqdfAeiDgQMNoYrysFisAtsBof8TjPDUNi3phj6Dd7q5DfUSwGXO/VefvwZbvMPyPUw+XH6CzPQ/wouSyc3QwItTL4Guc7hnY+6yjwNyBEJY2EW0O3FA+LubYYx2bLloIxJqpETgJyK6aoj4/etjyErbUFUWBLrApNSHbcEe/niFd7p8rIFpvbSaXIN7AgiEn/2Z5lASJOQdcs2gaHgGiSm9jaBV6DZMFYJGiBxGkzzfBcYgvAp2A0uWpC9B86BC+z/t2x5oAJjl5CbLN6dCU6CZyxmbbYI5GAsAIkj9A9a6siFdgI9iZFhXgn80ctFjtUWxFKHmEhuchmFIZHn9RREE872FcREIC5usNCt0m3JOAilHihn4jaDzizEKrAyTbKr9Fu6O9Xp8Tlku3pQq16542B7mQ2BfAOpaDpFSLwAc+k2GV6p9qdxf5FGb3KTq/SLi3g5ZaqU0nlA2Oek4ha/zy1bgeH/Dp/D6kchGg0eOACughpwGDLNDnZCmg1Hphhe7+OFUjr7tEhoT8jnG0CRwe5ssAhs1+d6cFeynVa/ES1aZoCNhjiSNkYIzKNzy4U721lxMXqP6E/xkEeOYqdOYmC0S8UazWJeJm/UsvxfJix1obgH1reRqz1MLjfoHOxE4yVZlYWSBNl+lM7rs5CQknwJCFpO/EDSLzbO/pfRcOdk5HwNvBIwQD+nPmtQhcHNOOOkCB+CkOpHbIxXMgN1OKIV8HM5Beg/MRYkGCpT5RKt4yXTfZL6H8Umi/siqMc1mPA9KN+SUqC2YuOdsSLq68/zvwIMALY19MhCHKvgAAAAAElFTkSuQmCC"
       />
+      <Badge logo="React" />
+      <Badge logo="Redux" logoColor="764ABC" />
+      <Badge logo="Bootstrap" logoColor="563D7C" />
+      <Badge logo="Material-UI" logoColor="0081CB" />
+      <Badge logo="Storybook" />
+      <Badge logo="Electron" logoColor="61DAFB" />
+      <Badge logo="Firebase" />
       <br />
 
       <Badge logo="Git" />
       <Badge logo="GitHub" />
       <Badge logo="GitHub-Actions" />
       <Badge logo="Bitbucket" logoColor="2684FF" />
-      <Badge logo="SonarCloud" />
       <Badge logo="Jira" logoColor="2684FF" />
+      <Badge logo="SonarCloud" />
       <br />
 
       <Badge logo="Visual-Studio-Code" logoColor="007ACC" />
