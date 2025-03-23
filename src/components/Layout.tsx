@@ -10,17 +10,7 @@ type LayoutProps = {
 export const Layout: FC<LayoutProps> = ({ children }): JSX.Element => (
   <>
     <Header siteTitle="rdarida.github.io" />
-
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `0 1.0875rem 1.45rem`
-      }}
-    >
-      <main>{children}</main>
-    </div>
-
+    <main>{children}</main>
     <Footer />
   </>
 );
