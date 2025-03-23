@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import { Header } from './Header';
+import { Footer } from './Footer';
 
 type LayoutProps = {
   children: any | Array<any>;
@@ -18,19 +19,8 @@ export const Layout: FC<LayoutProps> = ({ children }): JSX.Element => (
       }}
     >
       <main>{children}</main>
-
-      <footer
-        style={{
-          marginTop: `2rem`,
-          paddingTop: '0.5rem',
-          borderTop: '1px solid lightgrey',
-          textAlign: 'right'
-        }}
-      >
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://nextjs.org">NextJS</a>
-      </footer>
     </div>
+
+    <Footer />
   </>
 );
