@@ -6,8 +6,14 @@ import { Layout, Seo } from '@/components';
 const NotFoundPage: NextPage = (): JSX.Element => (
   <Layout>
     <Seo title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          <h1 className="my-3">404: Not Found</h1>
+          <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+        </div>
+      </div>
+    </div>
   </Layout>
 );
 
