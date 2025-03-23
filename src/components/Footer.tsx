@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 export const Footer: FC = (): JSX.Element => (
-  <footer className="mt-3 border-top">
+  <footer className="border-top">
     <div className="container">
       <div className="row">
         <div className="col-12 py-3 text-end">
