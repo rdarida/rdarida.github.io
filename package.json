@@ -20,6 +20,9 @@
     "dev": "next dev"
   },
   "dependencies": {
+    "@fontsource-variable/oswald": "^5.2.5",
+    "@fontsource-variable/roboto-condensed": "^5.2.5",
+    "@fontsource/kanit": "^5.2.5",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "font-awesome": "^4.7.0",
