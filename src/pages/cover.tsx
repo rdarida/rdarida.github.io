@@ -7,7 +7,7 @@ const CoverPage: NextPage = (): JSX.Element => {
   const [backgroundColor, setBackgroundColor] = useState<string>('#001220');
   const [title, setTitle] = useState<string>('Title');
   const [description, setDescription] = useState<string>('Description');
-  const [size, setSize] = useState(40);
+  const [size, setSize] = useState(50);
 
   const onBackgroundColorChange = useCallback((e: SyntheticEvent): void => {
     const { value } = e.target as HTMLInputElement;
@@ -46,7 +46,7 @@ const CoverPage: NextPage = (): JSX.Element => {
             <input
               type="text"
               value={backgroundColor}
-              onChange={onBackgroundColorChange}
+              onBlur={onBackgroundColorChange}
               className="form-control"
             />
           </div>

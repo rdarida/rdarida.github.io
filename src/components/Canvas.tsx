@@ -1,4 +1,7 @@
-import { FC, useEffect, useRef } from 'react';
+import { FC, use, useEffect, useRef, useState } from 'react';
+import { Application, Sprite, Text } from 'pixi.js';
+
+const GAP = 16;
 
 export type CoverProps = {
   backgroundColor: string;
@@ -7,36 +10,64 @@ export type CoverProps = {
   size?: number;
 };
 
-export const Canvas: FC<CoverProps> = ({
-  size = 40,
-  ...props
-}): JSX.Element => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  size = Math.max(0, Math.min(size, 120));
+export const Canvas: FC<CoverProps> = (props): JSX.Element => {
+  const ref = useRef<HTMLCanvasElement>(null);
+  const [title, setTitle] = useState<Text>();
+  const [description, setDescription] = useState<Text>();
 
-  useEffect(() => {
-    if (canvasRef.current) {
-      const { backgroundColor, title, description } = props;
-      const canvas = canvasRef.current as HTMLCanvasElement;
-      const ctx = canvas.getContext('2d');
+  useEffect((): void => {
+    if (ref.current) {
+      const app = new Application({
+        antialias: true,
+        backgroundColor: props.backgroundColor,
+        width: 1280,
+        height: 640,
+        view: ref.current
+      });
 
-      if (ctx) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const titleText = new Text('Title', {
+        align: 'center',
+        fill: '#ffffff',
+        fontFamily: 'Kanit',
+        fontSize: 80,
+        fontWeight: '700'
+      });
 
-        ctx.fillStyle = backgroundColor;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      titleText.anchor.x = 0.5;
 
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillStyle = '#ffffff';
-        ctx.font = '700 80px Kanit';
-        ctx.fillText(title, canvas.width * 0.5, 280);
+      const descriptionText = new Text('Description', {
+        align: 'center',
+        fill: '#ffffff',
+        fontFamily: 'Oswald Variable',
+        fontSize: 50, //Math.max(0, Math.min(size, 120)),
+        fontWeight: '300'
+      });
 
-        ctx.font = `300 ${size}px Oswald Variable`;
-        ctx.fillText(description, canvas.width * 0.5, 380);
-      }
+      descriptionText.anchor.x = 0.5;
+      descriptionText.y = titleText.y + titleText.height + GAP;
+
+      const textContainer = new Sprite();
+      textContainer.anchor.x = textContainer.anchor.y = 0.5;
+      textContainer.addChild(titleText);
+      textContainer.addChild(descriptionText);
+
+      const { height } = textContainer.getBounds();
+      textContainer.x = app.view.width * 0.5;
+      textContainer.y = (app.view.height - height) * 0.5;
+
+      app.stage.addChild(textContainer);
+
+      setTitle(titleText);
+      setDescription(descriptionText);
     }
-  }, [props, canvasRef]);
+  }, [ref]);
 
-  return <canvas ref={canvasRef} width={1280} height={640} />;
+  useEffect((): void => {
+    if (title && description) {
+      title.text = props.title;
+      description.text = props.description;
+    }
+  }, [title, description, props]);
+
+  return <canvas ref={ref} />;
 };
