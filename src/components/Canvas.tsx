@@ -1,4 +1,4 @@
-import { FC, use, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { Application, Graphics, Sprite, Text } from 'pixi.js';
 
 const GAP = 16;
@@ -15,12 +15,12 @@ export const Canvas: FC<CoverProps> = (props): JSX.Element => {
   const [bg, setBg] = useState<Graphics>();
   const [title, setTitle] = useState<Text>();
   const [description, setDescription] = useState<Text>();
+  const [container, setContainer] = useState<Sprite>();
 
   useEffect((): void => {
     if (ref.current) {
       const app = new Application({
         antialias: true,
-        backgroundColor: props.backgroundColor,
         width: 1280,
         height: 640,
         view: ref.current
@@ -64,19 +64,24 @@ export const Canvas: FC<CoverProps> = (props): JSX.Element => {
       setBg(bg);
       setTitle(titleText);
       setDescription(descriptionText);
+      setContainer(textContainer);
     }
   }, [ref]);
 
   useEffect((): void => {
-    if (bg && title && description) {
+    if (bg && title && description && container) {
       bg.beginFill(props.backgroundColor);
       bg.drawRect(-10, -10, 1300, 660);
       bg.endFill();
 
       title.text = props.title;
       description.text = props.description;
+      description.style.fontSize = Math.max(0, Math.min(props.size ?? 50, 120));
+
+      const { height } = container.getBounds();
+      container.y = (640 - height) * 0.5;
     }
-  }, [bg, title, description, props]);
+  }, [bg, title, description, container, props]);
 
   return <canvas ref={ref} />;
 };

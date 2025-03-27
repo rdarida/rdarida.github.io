@@ -62,7 +62,6 @@ const CoverPage: NextPage = (): JSX.Element => {
               type="text"
               value={title}
               onChange={onTitleChange}
-              placeholder="Title"
               className="form-control"
             />
           </div>
@@ -72,7 +71,6 @@ const CoverPage: NextPage = (): JSX.Element => {
               type="text"
               value={description}
               onChange={onDescriptionChange}
-              placeholder="Description"
               className="form-control"
             />
           </div>
@@ -82,7 +80,6 @@ const CoverPage: NextPage = (): JSX.Element => {
               type="number"
               value={size}
               onChange={onSizeChange}
-              placeholder="Size"
               className="form-control"
             />
           </div>
