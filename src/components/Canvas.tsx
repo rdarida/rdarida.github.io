@@ -1,5 +1,5 @@
 import { FC, use, useEffect, useRef, useState } from 'react';
-import { Application, Sprite, Text } from 'pixi.js';
+import { Application, Graphics, Sprite, Text } from 'pixi.js';
 
 const GAP = 16;
 
@@ -12,6 +12,7 @@ export type CoverProps = {
 
 export const Canvas: FC<CoverProps> = (props): JSX.Element => {
   const ref = useRef<HTMLCanvasElement>(null);
+  const [bg, setBg] = useState<Graphics>();
   const [title, setTitle] = useState<Text>();
   const [description, setDescription] = useState<Text>();
 
@@ -24,6 +25,9 @@ export const Canvas: FC<CoverProps> = (props): JSX.Element => {
         height: 640,
         view: ref.current
       });
+
+      const bg = new Graphics();
+      app.stage.addChild(bg);
 
       const titleText = new Text('Title', {
         align: 'center',
@@ -57,17 +61,22 @@ export const Canvas: FC<CoverProps> = (props): JSX.Element => {
 
       app.stage.addChild(textContainer);
 
+      setBg(bg);
       setTitle(titleText);
       setDescription(descriptionText);
     }
   }, [ref]);
 
   useEffect((): void => {
-    if (title && description) {
+    if (bg && title && description) {
+      bg.beginFill(props.backgroundColor);
+      bg.drawRect(-10, -10, 1300, 660);
+      bg.endFill();
+
       title.text = props.title;
       description.text = props.description;
     }
-  }, [title, description, props]);
+  }, [bg, title, description, props]);
 
   return <canvas ref={ref} />;
 };

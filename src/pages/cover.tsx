@@ -4,15 +4,20 @@ import { SyntheticEvent, useCallback, useState } from 'react';
 import { Canvas } from '@/components';
 
 const CoverPage: NextPage = (): JSX.Element => {
+  const [bgColor, setBgColor] = useState<string>('#001220');
   const [backgroundColor, setBackgroundColor] = useState<string>('#001220');
   const [title, setTitle] = useState<string>('Title');
   const [description, setDescription] = useState<string>('Description');
   const [size, setSize] = useState(50);
 
-  const onBackgroundColorChange = useCallback((e: SyntheticEvent): void => {
+  const onBgColorChange = useCallback((e: SyntheticEvent): void => {
     const { value } = e.target as HTMLInputElement;
-    setBackgroundColor(value);
+    setBgColor(value);
   }, []);
+
+  const onBgColorBlur = useCallback((): void => {
+    setBackgroundColor(bgColor);
+  }, [bgColor]);
 
   const onTitleChange = useCallback((e: SyntheticEvent): void => {
     const { value } = e.target as HTMLInputElement;
@@ -45,8 +50,9 @@ const CoverPage: NextPage = (): JSX.Element => {
           <div className="col-auto">
             <input
               type="text"
-              value={backgroundColor}
-              onBlur={onBackgroundColorChange}
+              value={bgColor}
+              onChange={onBgColorChange}
+              onBlur={onBgColorBlur}
               className="form-control"
             />
           </div>
