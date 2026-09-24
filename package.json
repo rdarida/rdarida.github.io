@@ -39,6 +39,7 @@
     "@types/react-dom": "^18",
     "@types/react-helmet": "^6.1.11",
     "prettier": "^3.4.2",
+    "prettier-plugin-brace-style": "^0.10.3",
     "sass": "^1.83.1",
     "typescript": "^5"
   }
