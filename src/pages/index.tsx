@@ -1,7 +1,7 @@
 import React from 'react';
 import { NextPage } from 'next';
 
-import { Layout, Seo, Badge } from '@/components';
+import { Layout, Seo, Badge, Avatar } from '@/components';
 
 const Home: NextPage = (): JSX.Element => (
   <Layout>
@@ -9,7 +9,8 @@ const Home: NextPage = (): JSX.Element => (
 
     <div className="container">
       <div className="row">
-        <div className="col-12 border-bottom">
+        <div className="col-12 text-center border-bottom">
+          <Avatar />
           <h1 className="my-3">Róbert Darida</h1>
         </div>
 
